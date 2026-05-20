@@ -1,0 +1,10 @@
+# --- Jekyll Theme Configuration ---
+theme: jekyll-theme-midnight
+
+# --- Custom Portfolio Metadata ---
+title: "ECHO CORE SYSTEMS"
+tagline: "SYS_INIT // INVESTIGATOR: ABIGAIL BURGOS // v4.0"
+description: "Sovereign AI Cognitive Architectures, Multimodal Computer Vision Loops, and Kinetic Vector Swarms."
+
+# --- Enable Downloads Button ---
+show_downloads: false
