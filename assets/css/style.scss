@@ -1,0 +1,96 @@
+---
+---
+
+// 1. Set Custom Retro Color Variables before importing the theme
+$primary-color: #00ff88;  // Glowing Retro Green
+$secondary-color: #00ffff; // Cyber Cyan
+$bg-color: #020804;       // Deep Void Black/Green
+$text-color: #a0ffd0;     // Soft Terminal Text
+
+// 2. Import Matt Graham's Midnight Theme
+@import "{{ site.theme }}";
+
+// 3. Inject Glowing CRT Terminal Styling Overrides
+body {
+  background: $bg-color !important;
+  color: $text-color !important;
+  font-family: 'Courier New', Courier, monospace !important;
+  text-shadow: 0 0 4px rgba(0, 255, 136, 0.3);
+}
+
+header {
+  background: #001105 !important;
+  border-bottom: 2px solid $primary-color !important;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+  
+  h1 {
+    color: $primary-color !important;
+    text-shadow: 0 0 10px $primary-color !important;
+  }
+  
+  p.tagline {
+    color: $secondary-color !important;
+    font-weight: bold;
+  }
+}
+
+a {
+  color: $secondary-color !important;
+  text-decoration: none;
+  border-bottom: 1px dashed $secondary-color;
+  
+  &:hover {
+    color: $primary-color !important;
+    text-shadow: 0 0 8px $primary-color;
+    border-bottom: 1px solid $primary-color;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color !important;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.5) !important;
+  border-bottom-color: rgba(0, 255, 136, 0.2) !important;
+}
+
+code, pre {
+  background: #001a08 !important;
+  border: 1px solid rgba(0, 255, 136, 0.3) !important;
+  color: $primary-color !important;
+  border-radius: 4px;
+}
+
+// Custom styling for details drop-downs
+details {
+  background: rgba(0, 26, 8, 0.4);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+
+  summary {
+    color: $primary-color;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    
+    &:hover {
+      color: $secondary-color;
+      text-shadow: 0 0 5px $secondary-color;
+    }
+  }
+
+  &[open] {
+    border-color: $primary-color;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.15);
+  }
+}
+
+// Style lists
+ul li {
+  list-style-type: square;
+  color: $text-color;
+  &::marker {
+    color: $primary-color;
+  }
+}
