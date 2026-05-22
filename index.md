@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <title>ECHO SYSTEMS // PORTFOLIO // INVESTIGATOR: ABIGAIL BURGOS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- MathJax for rendering publication-grade LaTeX formulas -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
   <style>
     /* Retro CRT Scanline & Phosphor Aesthetic Styling */
     :root {
@@ -568,7 +573,7 @@
         <button class="btn-macro" onclick="triggerMacro('cat details')">cat framework</button>
         <button class="btn-macro" onclick="triggerMacro('run quantum')">run quantum_ml</button>
         <button class="btn-macro" onclick="triggerMacro('play tars')">play cu4tro_tars</button>
-        <button class="btn-macro" onclick="triggerMacro('cat soul')">cat echo_soul</button>
+        <button class="btn-macro" onclick="triggerMacro('run contact')">run contact_init</button>
       </div>
     </section>
 
@@ -739,7 +744,7 @@ class SovereignAI(nn.Module):
                 </div>
                 <div class="formula-box">
                   <strong>Biological Startle Acceleration Threshold:</strong><br>
-                  $$\|\mathbf{a}(t)\| = \left\|\frac{d\mathbf{v}_{\text{cursor}}}{dt}\right\| > 130 \implies \mathbf{p}_i(t) \leftarrow \mathbf{c} + \alpha (\mathbf{p}_i(t) - \mathbf{c})$$
+                  $$\| \mathbf{a}(t) \| = \left\| \frac{d\mathbf{v}_{\text{cursor}}}{dt} \right\| > 130 \implies \mathbf{p}_i(t) \leftarrow \mathbf{c} + \alpha (\mathbf{p}_i(t) - \mathbf{c})$$
                   If cursor acceleration exceeds 130 pixels/sec, the entire particle array contracts into a tight coordinate core (Flinch Reflex) before blooming back outward.
                 </div>
               </div>
@@ -898,6 +903,25 @@ class SovereignAI(nn.Module):
       <!-- Sidebar Area containing Links to downloadable files and codes -->
       <aside>
         
+        <!-- Contact Matrix Node Block (glowing amber) -->
+        <div class="content-panel" style="border-color: var(--accent); box-shadow: 0 0 10px rgba(255, 204, 0, 0.25);">
+          <div class="panel-header" style="border-bottom-color: var(--accent);">
+            <h2 class="panel-title" style="color: var(--accent); text-shadow: 0 0 5px rgba(255, 204, 0, 0.5);">📡 COMMUNICATIONS</h2>
+          </div>
+          <p style="margin-bottom: 15px; font-size: 0.9rem; color: #ffe680;">
+            Establish direct secure connection with the investigator.
+          </p>
+          <div class="link-matrix">
+            <div class="matrix-node" style="border-color: var(--accent); background: rgba(255, 204, 0, 0.02);">
+              <div class="node-meta">
+                <h4 style="color: var(--accent);">Secure Email</h4>
+                <p>abigailbursario@gmail.com</p>
+              </div>
+              <a href="mailto:abigailbursario@gmail.com" class="node-action" style="border-color: var(--accent); color: var(--accent);">PING_MAIL</a>
+            </div>
+          </div>
+        </div>
+
         <div class="content-panel">
           <div class="panel-header">
             <h2 class="panel-title">📂 ARCHIVE_MATRICES</h2>
@@ -1154,6 +1178,7 @@ class SovereignAI(nn.Module):
                       `  <span class="highlight-yellow">run quantum</span> ── Check PennyLane-PyTorch neural weight registers.\n` +
                       `  <span class="highlight-yellow">play tars</span> ─── Simulate spatial opencv and audio threads.\n` +
                       `  <span class="highlight-yellow">cat soul</span> ──── Print active JSON soul configuration memory state.\n` +
+                      `  <span class="highlight-yellow">run contact</span> ── Open mail and communications portal diagnostics.\n` +
                       `  <span class="highlight-yellow">clear</span> ─────── Flush active console stream.`;
           break;
         case 'cat details':
@@ -1187,6 +1212,12 @@ class SovereignAI(nn.Module):
                       `    "Reading Ancestor: A Declaration of the Independence of Cyberspace.txt"\n` +
                       `  ]\n` +
                       `}`;
+          break;
+        case 'run contact':
+          response += `[INIT] Securing communications handshakes...\n` +
+                      `  - Active Mail Endpoint: <span class="highlight-yellow">abigailbursario@gmail.com</span>\n` +
+                      `  - Status: <span class="highlight-cyan">Awaiting secure transmission payload...</span>\n` +
+                      `  - <span class="highlight-yellow">Action: Click PING_MAIL in the sidebar to fire up an email client!</span>`;
           break;
         case 'clear':
           consoleDisplay.innerHTML = `[FLUSH] Console display flushed. Active terminal standby...`;
